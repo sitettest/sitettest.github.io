@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Перевод от ГазБанк Тест</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" id="style1">
+        <link rel="stylesheet" href="css/bootstrap.min.css" id="style2" disabled>
+        <link rel="stylesheet" type="text/css" href="css/style_form.css" id="style3" disabled> 
+    </head>
+    <body>
+        <div class="block active" id="block1">
+            <main class="content">
+                <section class="section welcome">
+                    <div class="container"> <img src="images/phone.png" alt="телефон" class="phone" loading="lazy">
+                        <div id="top" class="top">
+                            <div class="top__block"> <span class="top__logo">
+                            <img src="images/gazbank.png" loading="lazy" alt="">
+                        </span> <span class="top__text">
+                            сейчас
+                        </span> </div>
+                            <p>Перевод от "Газбанк" <span class="perevod">+ 100 000 р.<br class="mob"></span> Visa ** 1515 - Баланс <span class="balans">2 530 050 р.</span></p>
+                        </div>
+                        <div class="welcome__block">
+                            <h1 class="welcome__title">
+                        Нужен дополнительный доход?
+                    </h1>
+                            <h3 class="welcome__for_ru">Инвестпроект для <br class="non_mob">жителей <span class="ru">РОССИИ</span></h3>
+                            <h3 class="welcome__price">
+                        +15 860 <span>₽</span>
+                    </h3>
+                            <h1 class="welcome__info_text">
+                       за первую неделю работая <br class="mob">с нашей платформой
+                    </h1> </div>
+                        <a id="next" class="pulse welcome__button"> <span>
+                            Осталось <i>4 часа</i> до закрытия регистрации
+                       </span> </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="block" id="block2" style="display:none;">
+            <div class="logo"> <img src="images/logo.png"> </div>
+            <div class="money_phone"> <img src="images/money_phone.png"> </div>
+            <div class="form">
+                <form class="main_form" action="#" method="post">
+                    <div class="input_wrapper">
+                        <p class="main_text_form"><span class="help_text">Поздравляем! 🎉</span>
+                            <br>
+                            <br>У вас появилась ограниченная возможность, начать получать от 150000₽ в месяц на достоянии нашей страны!</p>
+                        <p class="form-text">Введите имя</p>
+                        <div class="form-group input-group input-wrap">
+                            <input class="form-input" type="text" name="name" placeholder="Ваше имя" required> </div>
+                        <p class="form-text">Введите фамилию</p>
+                        <div class="form-group input-group input-wrap">
+                            <input class="form-input" type="text" name="lastname" placeholder="Ваша фамилия" required> </div>
+                        <p class="form-text">Введите телефон</p>
+                        <div class="form-group input-group input-wrap">
+                            <input class="form-input" type="tel" name="phone" placeholder="077 509 84 456" required> </div>
+                        <p class="form-text">Введите почту</p>
+                        <div class="form-group input-group input-wrap">
+                            <input class="form-input" type="email" name="email" placeholder="Email" required> </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="form-btn signup pulse_2" type="submit"> Осталось мест 19/100 </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            const topBlock = document.getElementById('top');
+            setTimeout(() => {
+                topBlock.classList.add('show');
+            }, 500);
+
+            const html1 = document.getElementById("block1");
+            const html2 = document.getElementById("block2");
+            const nextBtn = document.getElementById("next");
+
+            nextBtn.addEventListener("click", function() {
+            html1.style.display = "none";
+            html2.style.display = "contents";
+            style1.disabled = true;
+            style2.disabled = false;
+            style3.disabled = false;
+            });
+
+        </script>
+    </body>
+
+</html>
